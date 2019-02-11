@@ -1,0 +1,31 @@
+namespace votos.system
+
+asset VotosCan identified by cand {
+  o String cand
+  o Double votos 
+  }
+
+asset VotosCiud identified by VotosDisp {
+  o String VotosDisp
+  o Double Votos
+}
+
+participant Ciudadano identified by hash {
+  o String hash
+  --> VotosCiud Disp
+}
+
+participant Candidato identified by post {
+  o String post
+  o String nombre
+  //datos adicionales
+  --> VotosCan votos 
+}
+
+transaction votar {
+  --> Ciudadano Ciudadano
+  --> Candidato Candidato
+}
+
+transaction VerVotos {
+}
