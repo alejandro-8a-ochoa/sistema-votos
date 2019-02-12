@@ -41,23 +41,10 @@ console.log(`voto exitoso por  ${nombre}`);
  async function VerVotos(ver)
  {
     let participantes = await getParticipantRegistry('votos.system.Candidato');
-    let a=participantes.get();
+    let a=participantes.getAll();
     
     console.log(a);
     
     
-    
-   // function obtener()
-  //  {
-      // Get the driver participant registry.
-//return getParticipantRegistry('votos.system.Candidato')
-/*.then(function (participantRegistry) {
-  // Get all of the drivers in the driver participant registry.
-  return participantRegistry.getAll();
-})
-.catch(function (error) {
-  // Add optional error handling here.
-  console.log(`error: ${error}`);
-});
-    }*/
+
  }
